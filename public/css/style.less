@@ -1,0 +1,66 @@
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+body {
+  
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#full {  }
+
+#json-editor {
+  min-width:600px;
+  height: 100%;
+  
+  
+  #txtInput{
+    width:91%;
+    padding:4%;
+    font-size:1.2em;
+    line-height:1.5em;
+    height: 100%;
+  }
+  
+  
+  //.json-editor-error-overlay {
+  //  position:absolute; 
+  //  top: 0; 
+  //  bottom : 0;
+  //  left : 0;
+  //  right : 0 ;
+  //  background:#800;
+  //  opacity:.6;
+  //  -moz-opacity:.6;
+  //}
+  
+  .json-editor-error {
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    line-height: 36px;
+    padding-left:30px;
+    color: #fff;
+    background: #6d0b0b;
+    z-index: 10;
+    
+    
+  }
+}
+
+.page-container {
+  width:100%;
+  display:table; 
+  
+  .container-col{
+    position:relative;
+    vertical-align:top;
+    width:45%;
+    display:table-cell;
+  }
+}
