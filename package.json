@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./server.js",
-    "dev": "nodemon -L ./server.js --ignore 'public/js/*.js'"
+    "dev": "nodemon -L ./server.js --ignore 'public/js/*.js'", 
+    "postinstall": "./node_modules/bower/bin/bower install"
 
   },
   "dependencies": {
