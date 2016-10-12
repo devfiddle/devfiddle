@@ -1,0 +1,39 @@
+extends layout
+
+block headerEnd
+  link(href="/vendor/jsoneditor/dist/jsoneditor.min.css", rel="stylesheet", type="text/css")
+  
+
+block content
+  #editor-toolbar
+    a(href="#", data-action="beautify") Beautify
+    | |
+    a(href="#", data-action="uglify") Uglify
+    | |
+    a(href="#") Button 1
+    | |
+    a(href="#") Button 1
+    | |
+    a(href="#") Button 1
+  #json-editor.page-container
+    .container-col#json_editor
+      textarea#txtInput
+        | {
+        |   "Array": [1, 2, 3],
+        |   "Boolean": true,
+        |   "Null": null,
+        |   "Number": 123,
+        |   "Object": {"a": "b", "c": "d"},
+        |   "String": "Hello World"
+        | }
+
+    .container-col#jsoneditor
+      .json-editor-error-overlay
+      .json-editor-error Invalid JSON
+        
+block clientScripts
+  script(src="/vendor/jquery/dist/jquery.min.js")
+  script(src="/vendor/jsoneditor/dist/jsoneditor.min.js")
+  script(src="/js/ace/ace.js")
+  script(src="/js/json.editor.js")
+    
