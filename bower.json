@@ -1,0 +1,22 @@
+{
+  "name": "devfiddle",
+  "description": "",
+  "main": "",
+  "authors": [
+    "cj-mac-mini <git@segevs.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cjemagid/devfiddle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jsoneditor": "^5.5.8",
+    "less": "^2.7.1"
+  }
+}
