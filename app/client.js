@@ -25,7 +25,6 @@ if (typeof window !== 'undefined') {
 }
 
 ////// utility methods //////
-
 Client.prototype.setAccessToken = function (token) {
     this.headers['x-access-token'] = token
     if (!token) {

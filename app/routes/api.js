@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.put('/:app' , (req,res,next ) => {
-    client.save(req.params.app, req.body)
+router.post('/:app' , (req,res,next ) => {
+    client.save(req.params.app, {data : req.body} )
         .then(app => {
             res.status(200).json(app);
         }).catch(err=>{
