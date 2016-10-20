@@ -28,6 +28,19 @@ $(function(){
             uglify();
             return false;
         })
+        .on('click' , '[data-action="save"]', function(){
+            $.post('/api/json', {
+                code : ace_editor.getValue()
+            }, function(json) {
+                
+                if(json && json.id) {
+                    console.log(json);
+                    // location.href = '/json/' + json.id;
+                }
+                console.log(json);
+            })
+            return false;
+        })
     ;
 
     ace_editor = ace.edit("json_editor");
