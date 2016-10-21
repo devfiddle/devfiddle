@@ -8,15 +8,12 @@ block headerEnd
 
 block content
   #editor-toolbar
-    a(href="#", data-action="beautify") Beautify
-    | |
-    a(href="#", data-action="uglify") Uglify
-    | |
-    a(href="#", data-action="save") Save
-    | |
-    a(href="#") Button 1
-    | |
-    a(href="#") Button 1
+    .item
+      a(href="#", data-action="beautify") Beautify
+    .item
+      a(href="#", data-action="uglify") Uglify
+    .item
+      a(href="#", data-action="save") Save
   #json-editor.page-container
     .container-col#json_editor
       textarea#txtInput
