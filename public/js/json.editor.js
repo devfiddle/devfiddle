@@ -34,8 +34,7 @@ $(function(){
             }, function(json) {
                 
                 if(json && json.id) {
-                    console.log(json);
-                    // location.href = '/json/' + json.id;
+                    location.href = '/json/' + json.id;
                 }
                 console.log(json);
             })
