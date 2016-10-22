@@ -1,21 +1,28 @@
 const express = require('express');
-const client = require('../client');
 
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   return res.redirect('/json');
-  res.render('index', { title: 'Express' });
+  // res.render('index', { title: 'Express' });
 });
 
 
 router.get('/json/:id?', (req,res,next)=>{
   if(req.params.id) {
+    client.get('json', req.params.id).then(data => {
+      res.render('json', {
+        title : 'Update your json fiddle - DevFiddle', 
+        data : data
+      } )  
+    })
     
-    console.log(req.params.id); 
+
   } else {
-    res.render('json', {})
+    res.render('json', {
+      title : 'Create a new json fiddle - DevFiddle',
+    })
   }
 })
 

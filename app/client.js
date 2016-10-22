@@ -44,7 +44,7 @@ Client.prototype.request = function (opts) {
             qs = '?' + querystring.stringify(opts.query)
         }
     
-        if(opts.xhr_debug) {
+        if(opts.xhr_debug || true) {
             console.log({"client"  :"0.0.1" , "opts" : opts , "uri" : self.baseUrl + opts.uri + qs});
         }
     
@@ -87,4 +87,11 @@ Client.prototype.save = function (app, data) {
         uri: '/' + app,
         body: data
     }); 
+}
+
+Client.prototype.get = function(app, id) {
+    return this.request({
+        method : 'get',
+        uri : ['',app,id].join('/'), 
+    })
 }

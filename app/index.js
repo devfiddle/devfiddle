@@ -9,6 +9,8 @@ var routes = require('./routes/index');
 
 var app = express();
 
+GLOBAL.client = require('./client')({xhr_debug : 1});
+
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'pug');

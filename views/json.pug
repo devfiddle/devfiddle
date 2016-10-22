@@ -12,8 +12,15 @@ block content
       a(href="#", data-action="beautify") Beautify
     .item
       a(href="#", data-action="uglify") Uglify
-    .item
-      a(href="#", data-action="save") Save
+    if(data && data.id)
+      .item
+        a(href="#", data-action="save") Update
+      .item
+        a(href="#", data-action="save") Fork
+        
+    else
+      .item
+        a(href="#", data-action="save") Save
   #json-editor.page-container
     .container-col#json_editor
       textarea#txtInput
