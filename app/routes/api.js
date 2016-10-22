@@ -1,5 +1,4 @@
 const express = require('express');
-const client = new require('../client')();
 
 var router = express.Router();
 
