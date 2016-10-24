@@ -22,6 +22,7 @@ router.get('/json/:id?', (req,res,next)=>{
   } else {
     res.render('json', {
       title : 'Create a new json fiddle - DevFiddle',
+      data : {}
     })
   }
 })

@@ -17,27 +17,37 @@ block content
         a(href="#", data-action="save") Update
       .item
         a(href="#", data-action="save") Fork
-        
     else
       .item
         a(href="#", data-action="save") Save
+    .item
+      a(href="https://github.com/devfiddle/devfiddle", target="_blank") Github
+    .item
+      a(href="https://trello.com/b/SjKI0rHQ", target="_blank") Trello
   #json-editor.page-container
     .container-col#json_editor
-      textarea#txtInput
-        | {
-        |   "Array": [1, 2, 3],
-        |   "Boolean": true,
-        |   "Null": null,
-        |   "Number": 123,
-        |   "Object": {"a": "b", "c": "d"},
-        |   "String": "Hello World"
-        | }
+      if data.data && data.data.code
+        textarea#txtInput= data.data.code
+      else 
+        textarea#txtInput
+          | {
+          |   "Array": [1, 2, 3],
+          |   "Boolean": true,
+          |   "Null": null,
+          |   "Number": 123,
+          |   "Object": {"a": "b", "c": "d"},
+          |   "String": "Hello World"
+          | }
 
     .container-col#jsoneditor
       .json-editor-error-overlay
       .json-editor-error Invalid JSON
+  
         
 block clientScripts
+  script.
+    var pd_id = '#{data.id}'; 
+    
   script(src="/vendor/jquery/dist/jquery.min.js")
   script(src="/vendor/jsoneditor/dist/jsoneditor.min.js")
   script(src="/js/ace/ace.js")
